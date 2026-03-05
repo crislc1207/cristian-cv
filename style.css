@@ -1,5 +1,5 @@
 /* ===============================
-   CONFIGURACIÓN GENERAL
+   RESET Y CONFIGURACIÓN GENERAL
 =================================*/
 
 * {
@@ -11,7 +11,7 @@
 body {
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: #222;
+    color: #333;
     display: flex;
     justify-content: center;
 }
@@ -60,18 +60,18 @@ main {
     display: inline-block;
     background: #00c6ff;
     color: white;
-    padding: 12px 25px;
+    padding: 12px 28px;
     border-radius: 30px;
     font-weight: bold;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-download:hover {
     background: #0072ff;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* ===============================
@@ -79,27 +79,27 @@ main {
 =================================*/
 
 section {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.97);
     padding: 30px;
     margin-bottom: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover profesional */
+/* Hover elegante */
 section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
 }
 
 /* ===============================
-   TITULOS
+   TITULOS DE SECCION
 =================================*/
 
 section h2 {
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #0f2027;
     border-left: 5px solid #2c5364;
     padding-left: 10px;
@@ -123,7 +123,7 @@ ul li:last-child {
 }
 
 /* ===============================
-   LINKS
+   ENLACES
 =================================*/
 
 a {
@@ -137,13 +137,13 @@ a:hover {
 }
 
 /* ===============================
-   EXPERIENCIA & EDUCACIÓN
+   EXPERIENCIA Y EDUCACIÓN
 =================================*/
 
 article {
     margin-bottom: 20px;
-    padding-left: 10px;
-    border-left: 3px solid #2c5364;
+    padding-left: 12px;
+    border-left: 4px solid #00c6ff;
 }
 
 article strong {
@@ -151,7 +151,7 @@ article strong {
 }
 
 article p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     opacity: 0.8;
 }
 
@@ -169,4 +169,19 @@ article p {
         padding: 20px;
     }
 
+}
+
+/* ===============================
+   ANIMACIÓN CUANDO SE HACE VISIBLE
+=================================*/
+
+section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
