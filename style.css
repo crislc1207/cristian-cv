@@ -1,47 +1,145 @@
-/* Diseño general */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+/* ===============================
+   CONFIGURACIÓN GENERAL
+=================================*/
+
+* {
     margin: 0;
     padding: 0;
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Contenedor principal */
 body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #222;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-/* Título principal */
-h1 {
-    margin-top: 40px;
+/* ===============================
+   CONTENEDOR PRINCIPAL
+=================================*/
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px 0;
 }
 
-/* Secciones */
-.section {
-    background: white;
-    width: 80%;
-    max-width: 900px;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+/* ===============================
+   HEADER
+=================================*/
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
 }
 
-/* Títulos de sección */
-.section h2 {
-    border-bottom: 2px solid #0077ff;
-    padding-bottom: 5px;
+.header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
 }
 
-/* Contacto */
-.contact p {
-    margin: 5px 0;
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 10px;
 }
 
-/* Experiencia */
-.job {
-    margin-bottom: 15px;
+/* ===============================
+   SECCIONES (TARJETAS)
+=================================*/
+
+section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover profesional */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   TITULOS
+=================================*/
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #0f2027;
+    border-left: 5px solid #2c5364;
+    padding-left: 10px;
+}
+
+/* ===============================
+   LISTAS
+=================================*/
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* ===============================
+   LINKS
+=================================*/
+
+a {
+    color: #2c5364;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+   EXPERIENCIA & EDUCACIÓN
+=================================*/
+
+article {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 3px solid #2c5364;
+}
+
+article strong {
+    font-size: 1.05rem;
+}
+
+article p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* ===============================
+   RESPONSIVE
+=================================*/
+
+@media (max-width: 768px) {
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
 }
