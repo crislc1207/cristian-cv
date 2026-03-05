@@ -1,43 +1,24 @@
+const cards = document.querySelectorAll(".card");
 
-/* ==========================================
-   ANIMACIÓN AL HACER SCROLL (APARICIÓN SUAVE)
-========================================== */
+const observer = new IntersectionObserver((entries) => {
 
-const sections = document.querySelectorAll("section");
+    entries.forEach(entry => {
 
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
+        if (entry.isIntersecting) {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
+            entry.target.classList.add("visible");
 
-        });
-    },
+        }
+
+    });
+
+},
     {
-        threshold: 0.2
-    }
-);
+        threshold: 0.15
+    });
 
-sections.forEach(section => {
-    observer.observe(section);
+cards.forEach(card => {
+
+    observer.observe(card);
+
 });
-
-
-/* ==========================================
-   PEQUEÑO EFECTO DINÁMICO EN EL BOTÓN
-========================================== */
-
-const downloadBtn = document.querySelector(".btn-download");
-
-if (downloadBtn) {
-
-    downloadBtn.addEventListener("mouseenter", () => {
-        downloadBtn.style.transform = "scale(1.05)";
-    });
-
-    downloadBtn.addEventListener("mouseleave", () => {
-        downloadBtn.style.transform = "scale(1)";
-    });
-}
